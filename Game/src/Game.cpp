@@ -1,16 +1,19 @@
 #include "../include/Game.hpp"
 
-#define MS_PER_UPDATE 60
-
 Game::Game()
 {
     this->previous = getCurrentTime();
     this->lag = 0.0;
     this->current = 0.0;
     this->elapsed = 0.0;
+
+    this->window = new Window();
 }
 
-Game::~Game(){}
+Game::~Game()
+{
+    delete this->window;
+}
 
 void Game::run()
 {
@@ -34,6 +37,11 @@ void Game::run()
 
         //render();
     }
+}
+
+void Game::update()
+{
+    this->window->update();
 }
 
 double Game::getCurrentTime()

@@ -7,11 +7,14 @@ int main( int argc, char *argv[] )
 
     game = new Game();
 
-    SDL_Init(SDL_INIT_VIDEO);
-    SDL_WM_SetCaption("Game", "SDL Test");
+    /** init SDL **/
+    SDL_Init( SDL_INIT_VIDEO );
+    SDL_WM_SetCaption( "Game", "SDL Test" );
 
     game->run();
 
+    /** Clean SDL **/
+    SDL_Quit();
     delete game;
 
     return 0;

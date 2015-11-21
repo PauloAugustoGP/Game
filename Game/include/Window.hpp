@@ -8,6 +8,7 @@ class Window
     public:
         Window();
         virtual ~Window();
+        void update();
 
     private:
         SDL_Surface *window;
