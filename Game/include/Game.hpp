@@ -2,6 +2,7 @@
 #define _GAME_H_
 
 #include "Window.hpp"
+#include "EventHandler.hpp"
 
 #define MS_PER_UPDATE 60
 
@@ -19,6 +20,7 @@ class Game
         double elapsed;
 
         Window *window;
+        EventHandler *event;
 
         double getCurrentTime();
         void update();

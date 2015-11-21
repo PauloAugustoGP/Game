@@ -8,11 +8,13 @@ Game::Game()
     this->elapsed = 0.0;
 
     this->window = new Window();
+    this->event = new EventHandler();
 }
 
 Game::~Game()
 {
     delete this->window;
+    delete this->event;
 }
 
 void Game::run()
@@ -20,18 +22,19 @@ void Game::run()
     this->previous = getCurrentTime();
     this->lag = 0.0;
 
-    while( true )
+    int endGame = 0;
+    while( endGame != -1 )
     {
         this->current = getCurrentTime();
         this->elapsed = this->current - this->previous;
         this->previous = this->current;
         this->lag += this->elapsed;
 
-        //processInput();
+        endGame = this->event->checkEvent();
 
         while( lag >= MS_PER_UPDATE )
         {
-            //update();
+            update();
             lag -= MS_PER_UPDATE;
         }
 

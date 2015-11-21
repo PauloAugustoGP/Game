@@ -1,11 +1,13 @@
 # depslib dependency file v1.0
-1448108461 source:c:\users\paulo\desktop\project\game\main.cpp
+1448112104 source:c:\users\paulo\desktop\project\game\main.cpp
 	"include\Game.hpp"
 	"SDL/SDL.h"
 
-1448070396 c:\users\paulo\desktop\project\game\include\game.hpp
+1448113018 c:\users\paulo\desktop\project\game\include\game.hpp
+	"Window.hpp"
+	"EventHandler.hpp"
 
-1448069945 source:c:\users\paulo\desktop\project\game\src\game.cpp
+1448113637 source:c:\users\paulo\desktop\project\game\src\game.cpp
 	"../include/Game.hpp"
 
 1325738639 c:\libraries\sdl-1.2.15\include\sdl\sdl.h
@@ -197,4 +199,18 @@
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
+
+1448111992 c:\users\paulo\desktop\project\game\include\window.hpp
+	"SDL/SDL.h"
+
+1448112029 source:c:\users\paulo\desktop\project\game\src\window.cpp
+	"../include/Window.hpp"
+
+1448113990 c:\users\paulo\desktop\project\game\include\eventhandler.hpp
+	"SDL/SDL.h"
+	"SDL/SDL_events.h"
+	<stdio.h>
+
+1448113536 source:c:\users\paulo\desktop\project\game\src\eventhandler.cpp
+	"../include/EventHandler.hpp"
 
