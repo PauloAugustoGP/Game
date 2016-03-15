@@ -5,6 +5,6 @@ What I'm using?
 
 Language -> C++
 
-Libraries -> SDL, OpenGL
+Libraries -> SFML, OpenGL
 
 IDE -> CodeBlocks
