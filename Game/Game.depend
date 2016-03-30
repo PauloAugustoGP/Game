@@ -1,6 +1,6 @@
 # depslib dependency file v1.0
-1457995748 source:c:\users\paulo\desktop\game\game\main.cpp
-	<SFML/Graphics.hpp>
+1459367154 source:c:\users\paulo\desktop\game\game\main.cpp
+	"include/WindowManager.hpp"
 
 1429780453 c:\libraries\sfml-2.3.2\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -379,4 +379,8 @@
 	<SFML/System/String.hpp>
 	<string>
 	<vector>
+
+1459366991 c:\users\paulo\desktop\game\game\include\windowmanager.hpp
+	<SFML/Graphics.hpp>
+	<iostream>
 

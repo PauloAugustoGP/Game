@@ -1,24 +1,37 @@
-#include <SFML/Graphics.hpp>
+#include "include/WindowManager.hpp"
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
+    WindowManager *windowManager;
+    windowManager = new WindowManager();
+
     sf::CircleShape shape(100.f);
     shape.setFillColor(sf::Color::Green);
 
-    while( window.isOpen() )
+    while( windowManager->getWindow()->isOpen() )
     {
         sf::Event event;
-        while (window.pollEvent(event))
+        while (windowManager->getWindow()->pollEvent(event))
         {
+            if (event.type == sf::Event::KeyReleased)
+            {
+                if(event.key.code == sf::Keyboard::Escape)
+                    windowManager->getWindow()->close();
+
+                if(event.key.code == sf::Keyboard::U)
+                    windowManager->updateWindow();
+            }
+
             if (event.type == sf::Event::Closed)
-                window.close();
+                windowManager->getWindow()->close();
         }
 
-        window.clear();
-        window.draw(shape);
-        window.display();
+        windowManager->getWindow()->clear();
+        windowManager->getWindow()->draw(shape);
+        windowManager->getWindow()->display();
     }
+
+    delete windowManager;
 
     return 0;
 }
